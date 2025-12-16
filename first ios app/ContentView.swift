@@ -9,22 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack (alignment: .leading, spacing: 20, content:greetings)
+        VStack (alignment: .leading, spacing: 20, content: {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            if true{
+                Text("Mahir's first app!")
+            }
+            Circle()
+        })
     }
     
     @ViewBuilder
-//    func greetings() -> TupleView <(Image, Text, Circle)>{
     func greetings() -> some View{
-        Image(systemName: "globe")
-            .imageScale(.large)
-            .foregroundStyle(.tint)
-        if true{
-            Text("Mahir's first app!")
-        }
-        Circle()
+        
     }
+    
 }
-
 #Preview {
     ContentView()
 }
